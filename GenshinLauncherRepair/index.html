@@ -865,14 +865,9 @@
 
 
             <!-- TODO: this max-height is necessary or else the branch list won't scroll.  why? -->
-            <div data-target="ref-selector.listContainer" role="menu" class="SelectMenu-list " style="max-height: 330px" data-pjax="#repo-content-pjax-container">
-              <div class="SelectMenu-loading pt-3 pb-0" aria-label="Menu is loading">
-                <svg style="box-sizing: content-box; color: var(--color-icon-primary);" width="32" height="32" viewBox="0 0 16 16" fill="none" data-view-component="true" class="anim-rotate">
-  <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-opacity="0.25" stroke-width="2" vector-effect="non-scaling-stroke"></circle>
-  <path d="M15 8a7.002 7.002 0 00-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
-</svg>
-              </div>
-            </div>
+            <div data-target="ref-selector.listContainer" role="menu" class="SelectMenu-list " style="max-height: 330px" data-pjax="#repo-content-pjax-container"><div style="position: relative; overflow: hidden; width: 100%; min-height: 100%; will-change: transform; height: 33px;"><div style="position:absolute; top:0; left:0; height:100%; width:100%; overflow:visible;">
+              <div class="SelectMenu-message" data-index="0">Could not load branches</div>
+            <span></span></div></div></div>
 
               <template data-target="ref-selector.itemTemplate">
   <a href="https://github.com/AbyssP/GenshinLauncherRepair/tree/{{ urlEncodedRefName }}" class="SelectMenu-item" role="menuitemradio" rel="nofollow" aria-checked="{{ isCurrent }}" data-index="{{ index }}">
@@ -1151,9 +1146,7 @@
       <a href="https://github.com/AbyssP/GenshinLauncherRepair/commit/1f957e36ee4f0b37ab0eaae575e0f42a1932729c" class="f6 Link--secondary text-mono ml-2 d-none d-lg-inline" data-pjax="">
         1f957e3
       </a>
-      <a href="https://github.com/AbyssP/GenshinLauncherRepair/commit/1f957e36ee4f0b37ab0eaae575e0f42a1932729c" class="Link--secondary ml-2" data-pjax="">
-        <relative-time datetime="2021-08-31T10:00:41Z" class="no-wrap" title="Aug 31, 2021, 5:00 PM GMT+7">25 minutes ago</relative-time>
-      </a>
+      
     </div>
   </div>
   <div class="pl-0 pl-md-5 flex-order-1 width-full Details-content--hidden">
@@ -1208,7 +1201,7 @@
         <div role="columnheader">Commit time</div>
       </div>
 
-        <div role="row" class="Box-row Box-row--focus-gray py-2 d-flex position-relative js-navigation-item ">
+        <div role="row" class="Box-row Box-row--focus-gray py-2 d-flex position-relative js-navigation-item navigation-focus">
           <div role="gridcell" class="mr-3 flex-shrink-0" style="width: 16px;">
               <svg aria-label="File" aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-file color-icon-tertiary">
     <path fill-rule="evenodd" d="M3.75 1.5a.25.25 0 00-.25.25v11.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25V6H9.75A1.75 1.75 0 018 4.25V1.5H3.75zm5.75.56v2.19c0 .138.112.25.25.25h2.19L9.5 2.06zM2 1.75C2 .784 2.784 0 3.75 0h5.086c.464 0 .909.184 1.237.513l3.414 3.414c.329.328.513.773.513 1.237v8.086A1.75 1.75 0 0112.25 15h-8.5A1.75 1.75 0 012 13.25V1.75z"></path>
@@ -1225,12 +1218,10 @@
               </span>
           </div>
 
-          <div role="gridcell" class="color-text-tertiary text-right" style="width:100px;">
-              <time-ago datetime="2021-08-31T10:00:41Z" data-view-component="true" class="no-wrap" title="Aug 31, 2021, 5:00 PM GMT+7">25 minutes ago</time-ago>
-          </div>
+          
 
         </div>
-        <div role="row" class="Box-row Box-row--focus-gray py-2 d-flex position-relative js-navigation-item ">
+        <div role="row" class="Box-row Box-row--focus-gray py-2 d-flex position-relative js-navigation-item">
           <div role="gridcell" class="mr-3 flex-shrink-0" style="width: 16px;">
               <svg aria-label="File" aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-file color-icon-tertiary">
     <path fill-rule="evenodd" d="M3.75 1.5a.25.25 0 00-.25.25v11.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25V6H9.75A1.75 1.75 0 018 4.25V1.5H3.75zm5.75.56v2.19c0 .138.112.25.25.25h2.19L9.5 2.06zM2 1.75C2 .784 2.784 0 3.75 0h5.086c.464 0 .909.184 1.237.513l3.414 3.414c.329.328.513.773.513 1.237v8.086A1.75 1.75 0 0112.25 15h-8.5A1.75 1.75 0 012 13.25V1.75z"></path>
@@ -1247,12 +1238,10 @@
               </span>
           </div>
 
-          <div role="gridcell" class="color-text-tertiary text-right" style="width:100px;">
-              <time-ago datetime="2021-08-31T09:40:24Z" data-view-component="true" class="no-wrap" title="Aug 31, 2021, 4:40 PM GMT+7">1 hour ago</time-ago>
-          </div>
+          
 
         </div>
-        <div role="row" class="Box-row Box-row--focus-gray py-2 d-flex position-relative js-navigation-item ">
+        <div role="row" class="Box-row Box-row--focus-gray py-2 d-flex position-relative js-navigation-item">
           <div role="gridcell" class="mr-3 flex-shrink-0" style="width: 16px;">
               <svg aria-label="File" aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-file color-icon-tertiary">
     <path fill-rule="evenodd" d="M3.75 1.5a.25.25 0 00-.25.25v11.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25V6H9.75A1.75 1.75 0 018 4.25V1.5H3.75zm5.75.56v2.19c0 .138.112.25.25.25h2.19L9.5 2.06zM2 1.75C2 .784 2.784 0 3.75 0h5.086c.464 0 .909.184 1.237.513l3.414 3.414c.329.328.513.773.513 1.237v8.086A1.75 1.75 0 0112.25 15h-8.5A1.75 1.75 0 012 13.25V1.75z"></path>
@@ -1269,9 +1258,7 @@
               </span>
           </div>
 
-          <div role="gridcell" class="color-text-tertiary text-right" style="width:100px;">
-              <time-ago datetime="2021-08-31T09:57:40Z" data-view-component="true" class="no-wrap" title="Aug 31, 2021, 4:57 PM GMT+7">28 minutes ago</time-ago>
-          </div>
+          
 
         </div>
     </div>
@@ -1560,4 +1547,5 @@ The program come with tkinter interface for easier uses.</p>
   
 
 
+<div aria-live="polite" class="sr-only"></div>
 <div aria-live="polite" class="sr-only"></div></body></html>
